@@ -5,17 +5,21 @@ import EmailIcon from "@mui/icons-material/Email";
 import CallIcon from "@mui/icons-material/Call";
 import Divider from "@mui/material/Divider";
 import Header from "../components/header";
-import Organizations from "../components/Organizations";
-import Services from "../components/Services";
-import MoreInformation from "../components/MoreInformation";
-import CompleteSteps from "../components/CompleteSteps";
-import FAQ from "../components/FAQ";
-import WhyCuttle from "../components/WhyCuttle";
-import FundSecurity from "../components/FundSecurity";
-import Banner from "../components/Banner";
-import WorldElite from "../components/WorldElite";
-import AboutCard from "../components/AboutCard";
-import Footer from "../components/Footer";
+
+import {
+  Organizations,
+  Services,
+  MoreInformation,
+  CompleteSteps,
+  FAQ,
+  WhyCuttle,
+  FundSecurity,
+  Banner,
+  WorldElite,
+  AboutCard,
+  Footer
+} from "../components";
+
 
 const LandingPage = () => {
   return (

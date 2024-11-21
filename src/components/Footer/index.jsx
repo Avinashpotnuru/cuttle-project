@@ -45,7 +45,7 @@ const Footer = () => {
             {Array.from({ length: 4 }).map((_, idx) => (
               <Box
                 key={idx}
-                className="flex justify-start items-center  w-[24px] h-[24px] rounded-full"
+                className="flex justify-center items-center  w-[24px] h-[24px] rounded-full bg-clip-padding bg-gray-100  backdrop-filter backdrop-blur-sm bg-opacity-20"
               >
                 <img src={`/src/assets/socialMedia/icon${idx + 1}.png`} />
               </Box>

@@ -5,7 +5,7 @@ import CustomButton from "../DefaultButton";
 
 const Header = () => {
   return (
-    <Box component="div" className="p-2">
+    <Box component="div" className="py-4">
       {/* <img src="/Vector.jpg" alt="logo" /> */}
       <Stack
         direction="row"
@@ -13,7 +13,7 @@ const Header = () => {
         justifyContent="space-between"
         alignItems="center"
       >
-        <h2>cuttle card</h2>
+        <img src="/src/assets/companyLogo.png" />
         <Stack direction="row" spacing={2}>
           {["Home", "Help Center", "About us"].map((item, idx) => (
             <Button key={idx} variant="text" sx={{ color: "#C5CDE9" }}>
