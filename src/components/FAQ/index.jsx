@@ -1,0 +1,19 @@
+import { Box} from "@mui/material";
+import AccordionComponent from "../AccordionComponent";
+import { faqData } from "../../Data";
+
+
+const FAQ = () => {
+  return (
+    <Box component="div" className="w-[80%] mx-auto">
+      <h1 className="text-lg font-bold text-white py-3">Frequently Aksed Questions</h1>
+      <Box className="mt-4 space-y-6">
+        {faqData.map((data,idx) => (
+          <AccordionComponent {...data} key={idx} />
+        ))}
+      </Box>
+    </Box>
+  );
+};
+
+export default FAQ;
