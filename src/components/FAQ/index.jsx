@@ -1,9 +1,9 @@
 import { Box} from "@mui/material";
 import AccordionComponent from "../AccordionComponent";
-import { faqData } from "../../Data";
+import faqData from "../../Data/faqData";
 
 
-const FAQ = () => {
+const Faq= () => {
   return (
     <Box bgcolor="#161F36" component="div" className=" mx-auto px-[20px] lg:px-[120px] py-[60px] font-montserrat ">
       <h1 className="text-2xl font-bold text-white py-3 ">
@@ -18,4 +18,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

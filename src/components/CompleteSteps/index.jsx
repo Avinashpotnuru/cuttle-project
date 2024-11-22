@@ -35,16 +35,15 @@ const CompleteSteps = () => {
             display: { xs: "none", lg: "block" },
           }}
         />
-        
-          {[
-            "Create an Account",
-            "Complete KYC",
-            "Complete KYC",
-            "Collateral Injection",
-          ].map((val, idx) => (
-            <StepCard key={val} idx={idx} title={val} />
-          ))}
-       
+
+        {[
+          "Create an Account",
+          "Complete KYC",
+          "Activation",
+          "Collateral Injection",
+        ].map((val, idx) => (
+          <StepCard key={idx} idx={idx} title={val} />
+        ))}
       </Box>
 
       <DefaultButton endIcon={<ArrowForwardIcon />}>Apply Now</DefaultButton>

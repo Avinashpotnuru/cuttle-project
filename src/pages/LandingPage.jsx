@@ -12,7 +12,7 @@ import {
   Services,
   MoreInformation,
   CompleteSteps,
-  FAQ,
+  Faq,
   WhyCuttle,
   FundSecurity,
   Banner,
@@ -70,7 +70,7 @@ const LandingPage = () => {
       <AboutCard />
       <MoreInformation />
       <CompleteSteps />
-      <FAQ />
+      <Faq />
       <Footer />
     </>
   );

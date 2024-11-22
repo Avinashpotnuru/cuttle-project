@@ -18,42 +18,23 @@ const servicesData = [
     desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
   },
   {
-    id: 3,
+    id: 4,
     img: "/src/assets/Services/service4.png",
     title: "Fully Managed Servers",
     desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
   },
 ];
 
-const faqData = [
-  {
-    title: "What are some tips when choosing a hosting package?",
-    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  },
-  {
-    title: "How do I choose the right server?",
-    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  },
-  {
-    title: "What if I need help choosing the right domain?",
-    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  },
-  {
-    title: "How can i contact your technical team?",
-    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  },
-  {
-    title: "Differences between Cloud Hosting and Shared Hosting?",
-    desc: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
-  },
-];
+
 
 const footerData = [
   {
+    id: 1,
     title: "Quick Links",
     links: ["Portfolio", "Blogs", "About", "Press", "Careers"],
   },
   {
+    id: 2,
     title: "Services",
     links: [
       "UX/UI Design",
@@ -64,9 +45,10 @@ const footerData = [
     ],
   },
   {
+    id: 3,
     title: "Reach us",
     links: ["hello@passto.com", "+91 98765 43210", "Noida, Uttar Pradesh "],
   },
 ];
 
-export { servicesData, faqData, footerData };
+export { servicesData, footerData };
