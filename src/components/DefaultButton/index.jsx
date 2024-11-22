@@ -2,24 +2,24 @@ import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
 const DefaultButton = styled(Button)(({ theme }) => ({
-  backgroundColor: "orange", // Default background color
-  color: "white", // Text color
-  padding: theme.spacing(1, 3), // Vertical and horizontal padding
-  borderRadius: "4px", // Rounded corners
-  fontSize: "14px", // Font size
+  backgroundColor: "orange", 
+  color: "white",
+  padding: theme.spacing(1, 3), 
+  borderRadius: "4px", 
+  fontSize: "14px", 
   textTransform: "none",
-  fontWeight: "bold", // Disable uppercase text
-  boxShadow: theme.shadows[2], // Subtle shadow
+  fontWeight: "bold", 
+  boxShadow: theme.shadows[2], 
   "&:hover": {
-    backgroundColor: "#e68a00", // Darker orange on hover
-    boxShadow: theme.shadows[4], // Increased shadow on hover
+    backgroundColor: "#e68a00", 
+    boxShadow: theme.shadows[4], 
   },
   "&:active": {
-    backgroundColor: "#cc7700", // Even darker orange when active
+    backgroundColor: "#cc7700", 
   },
   "&:disabled": {
-    backgroundColor: "#f5b880", // Light orange for disabled state
-    color: "#ffffff80", // Light white for disabled text
+    backgroundColor: "#f5b880", 
+    color: "#ffffff80", 
   },
 }));
 export default DefaultButton;

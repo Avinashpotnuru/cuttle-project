@@ -13,8 +13,8 @@ const AccordionComponent = ({title}) => {
         fontSize: "16px",
         bgcolor: "transparent",
         color: "#96A1C2",
-        borderBottom: "1px solid #96A1C2", // Add a light border at the bottom
-        boxShadow: "0px 2px 5px rgba(189, 182, 182, 0.1)", // Add a subtle shadow
+        borderBottom: "1px solid #96A1C2", 
+        boxShadow: "0px 2px 5px rgba(189, 182, 182, 0.1)", 
       }}
     >
       <AccordionSummary
