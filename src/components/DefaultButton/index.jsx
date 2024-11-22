@@ -6,7 +6,7 @@ const DefaultButton = styled(Button)(({ theme }) => ({
   color: "white", // Text color
   padding: theme.spacing(1, 3), // Vertical and horizontal padding
   borderRadius: "4px", // Rounded corners
-  fontSize: "16px", // Font size
+  fontSize: "14px", // Font size
   textTransform: "none",
   fontWeight: "bold", // Disable uppercase text
   boxShadow: theme.shadows[2], // Subtle shadow

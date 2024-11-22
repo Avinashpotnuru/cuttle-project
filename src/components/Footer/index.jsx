@@ -6,7 +6,7 @@ const Footer = () => {
   const hyperLinkComponent = (data, idx) => {
     return (
       <Box key={idx}>
-        <h1 className="text-2xl pb-5">{data.title}</h1>
+        <h1 className="text-2xl  pb-5">{data.title}</h1>
 
         {data.links.map((val, idx) => (
           <Stack direction="row" alignItems="center" key={idx} gap={2}>
@@ -16,15 +16,9 @@ const Footer = () => {
                 alt={`contact ${idx + 1}`}
               />
             )}
-            <p className="py-2">
+            <p className="py-2 text-sm font-normal">
               {val}
-              {data.title === "Quick Links" &&
-                idx === 4 &&
-                val === "Careers" && (
-                  <span className="ml-2 text-yellow-300 font-nanum-pen nanum-pen-script-regular">
-                    {"We’re hiring"}
-                  </span>
-                )}
+            
             </p>
           </Stack>
         ))}
@@ -32,7 +26,7 @@ const Footer = () => {
     );
   };
   return (
-    <Box className="h-[470px]  bg-[#1c2746]  opacity-75  relative flex justify-center items-center mt-20 ">
+    <Box className="h-[470px]   bg-[#1c2746]  opacity-75  relative flex flex-col justify-center items-center mt-0 font-inter ">
       <img src="/src/assets/footer.png" className="absolute right-0 " />
       <Box className="   grid grid-cols-4 gap-8 px-[120px] py-[60px] text-white">
         <Box className="flex flex-col justify-around items-baseline h-[254px]">
@@ -54,6 +48,10 @@ const Footer = () => {
         </Box>
 
         {footerData.map((data, idx) => hyperLinkComponent(data, idx))}
+      </Box>
+      <Box className="flex  justify-between items-center w-[85%] text-white">
+        <h1>© 2024 Cuttle Card. All rights reserved</h1>
+        <h1>Terms & Conditions | Privacy Policy | Sitemap | Disclaimer</h1>
       </Box>
     </Box>
   );

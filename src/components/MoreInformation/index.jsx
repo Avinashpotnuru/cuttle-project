@@ -18,8 +18,8 @@ const MoreInformation = () => {
       }}
     >
       <Box sx={{ fontFamily: "Overpass, sans-serif" }}>
-        <h1 className="font-bold">APPLY YOUR EXCLUSIVE CREDIT CARD NOW</h1>
-        <p>
+        <h1 className="font-normal text-[26px]">APPLY YOUR EXCLUSIVE CREDIT CARD NOW</h1>
+        <p className="font-openSans text-base font-light ">
           There are many variations of passages of Lorem Ipsum available, but{" "}
           <br />
           the majority have suffered alteration in some form

@@ -10,6 +10,7 @@ const AccordionComponent = ({title}) => {
   return (
     <Accordion
       sx={{
+        fontSize: "16px",
         bgcolor: "transparent",
         color: "#96A1C2",
         borderBottom: "1px solid #96A1C2", // Add a light border at the bottom

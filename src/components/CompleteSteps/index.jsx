@@ -2,17 +2,19 @@ import { Box, Divider } from "@mui/material"
 import StepCard from "../StepCard";
 import DefaultButton from "../DefaultButton";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import "@fontsource/overpass";
+
 
 
 const CompleteSteps = () => {
   return (
     <Box
       component="div"
-      className="flex flex-col justify-center items-center py-10 my-20 bg-[#17203A]"
+      className="flex flex-col justify-center items-center py-10 mt-20 bg-[#17203A] font-openSans"
     >
-      <h1 className="font-bold text-2xl">How to Start with Cuttle Card</h1>
-      <h6 className="text-center">
+      <h1 className="font-bold text-4xl text-white mb-3 !font-overpass ">
+        How to Start with Cuttle Card
+      </h1>
+      <h6 className="text-center font-openSans">
         All you need to do to complete your credit card application is
         tocomplete the following <br />
         four steps

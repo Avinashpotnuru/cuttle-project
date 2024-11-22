@@ -4,17 +4,22 @@ import DefaultButton from "../DefaultButton";
 
 const AboutCard = () => {
   return (
-    <Box padding="60px 80px">
-      <Box display="flex" bgcolor="#17203A">
-        <Box className="flex-1 px-[89px]  flex flex-col justify-start items-start m-auto  space-y-4">
-          <h1 className="text-2xl ">About Cuttle Card </h1>
-          <Box className="space-y-3">
+    <Box
+      padding="60px 80px"
+      height="515px"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Box display="flex" bgcolor="#17203A" height="376px">
+        <Box className="flex-1 pl-[30px]  flex flex-col justify-start items-start m-auto  space-y-6 w-full font-overpass">
+          <h1 className="text-3xl text-white font-semibold ">
+            About Cuttle Card{" "}
+          </h1>
+          <Box className="space-y-3 mr-11 font-openSans">
             <h6 className="text-sm">
               The Cuttle Card credit card is operated by King Dynasty Capital
               Limited.Cuttle Card Credit Card has a distinct legal operating
-              entity, information security standards, and KYC/AML guidelines.
-              The PassTo credit card is operated by King Dynasty Capital
-              Limited. Cuttle Card Credit Card has a distinct legal operating
               entity, information security standards, and KYC/AML guidelines.
             </h6>
             <h6 className="text-sm">
@@ -28,7 +33,7 @@ const AboutCard = () => {
           </DefaultButton>
         </Box>
         <Box flex={1} textAlign="center">
-          <img src="/src/assets/aboutCard.png" />
+          <img className="h-full w-full" src="/src/assets/aboutCard.png" />
         </Box>
       </Box>
     </Box>

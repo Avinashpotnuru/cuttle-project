@@ -5,10 +5,12 @@ import { faqData } from "../../Data";
 
 const FAQ = () => {
   return (
-    <Box component="div" className="w-[80%] mx-auto">
-      <h1 className="text-lg font-bold text-white py-3">Frequently Aksed Questions</h1>
+    <Box bgcolor="#161F36" component="div" className=" mx-auto px-[120px] py-[60px] font-montserrat ">
+      <h1 className="text-2xl font-bold text-white py-3 ">
+        Frequently Aksed Questions
+      </h1>
       <Box className="mt-4 space-y-6">
-        {faqData.map((data,idx) => (
+        {faqData.map((data, idx) => (
           <AccordionComponent {...data} key={idx} />
         ))}
       </Box>

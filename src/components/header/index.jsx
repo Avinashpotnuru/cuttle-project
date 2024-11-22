@@ -5,7 +5,7 @@ import CustomButton from "../DefaultButton";
 
 const Header = () => {
   return (
-    <Box component="div" className="py-4">
+    <Box component="div" className="py-4" marginInlineStart="120px" marginInlineEnd="120px">
       {/* <img src="/Vector.jpg" alt="logo" /> */}
       <Stack
         direction="row"
@@ -25,11 +25,16 @@ const Header = () => {
             {["Login", "Register Now"].map((item, idx) => (
               <CustomButton
                 key={idx}
-                variant="contained"
+                variant={idx === 0 ? "text" : "contained"}
                 sx={{
-                  bgcolor: idx === 0 ? "#232f52" : "primary.main",
+                  bgcolor:
+                    idx === 0 ? "rgba(211, 211, 211, 0.1)" : "primary.main", // Light grey with 50% opacity
                   color: idx === 0 ? "primary.main" : "white",
-                  border: idx === 0 ? "2px solid #96A1C2" : "none",
+                  "&:hover": {
+                    bgcolor:
+                      idx === 0 ? "rgba(211, 211, 211, 0.8)" : "primary.dark", // Slightly darker grey on hover
+                  },
+                  border: idx === 0 ? "none" : "none", // No border for the "Login" button
                 }}
               >
                 {item}
