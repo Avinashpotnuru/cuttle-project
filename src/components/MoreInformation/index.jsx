@@ -3,22 +3,19 @@ import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "@fontsource/overpass";
 
-
 const MoreInformation = () => {
   return (
     <Stack
-      direction="row"
+      className=" py-[40px] px-5 lg:px-[120px] justify-between items-center text-white mt-[60px] space-y-4 md:space-y-8 lg:space-y-0 "
+      direction={{ xs: "column", lg: "row" }}
       sx={{
         bgcolor: "primary.main",
-        padding: "40px 120px",
-        justifyContent: "space-between",
-        alignItems: "center",
-        color: "white",
-        marginTop: "60px",
       }}
     >
       <Box sx={{ fontFamily: "Overpass, sans-serif" }}>
-        <h1 className="font-normal text-[26px]">APPLY YOUR EXCLUSIVE CREDIT CARD NOW</h1>
+        <h1 className="font-normal text-[26px]">
+          APPLY YOUR EXCLUSIVE CREDIT CARD NOW
+        </h1>
         <p className="font-openSans text-base font-light ">
           There are many variations of passages of Lorem Ipsum available, but{" "}
           <br />

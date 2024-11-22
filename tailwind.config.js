@@ -4,6 +4,7 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      display: ["responsive"],
       fontFamily: {
         overpass: ['"Overpass"', "sans-serif"],
         openSans: ['"Open Sans"', "sans-serif"],

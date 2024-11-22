@@ -3,9 +3,9 @@ import DefaultButton from "../DefaultButton";
 
 const Banner = () => {
   return (
-    <Box className="flex justify-center gap-[60px] items-center mx-[140px] my-[80px]">
+    <Box className="flex flex-col lg:flex-row justify-center gap-[60px] items-center mx-[20px] lg:mx-[140px] my-[80px]">
       <Box className="flex-1  flex flex-col justify-start items-start m-auto  bg-[url('/src/assets/world2.png')] space-y-6 bg-cover bg-center py-24">
-        <h1 className="text-5xl text-white font-semibold font-overpass">
+        <h1 className="text-2xl md:text-5xl text-white font-semibold font-overpass">
           Cuttle Card <br />
           Multi-Asset Collateral Credit Card
         </h1>

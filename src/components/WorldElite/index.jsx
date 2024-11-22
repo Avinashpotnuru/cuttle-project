@@ -4,13 +4,14 @@ import DefaultButton from "../DefaultButton";
 
 const WorldElite = () => {
   return (
-    <Box display="flex" margin="60px 80px">
+    <Box className="flex lg:flex-row flex-col justify-center items-center my-[60px] mx-5 lg:mx-[80px]" >
       <Box flex={1} textAlign="center">
         <img src="/src/assets/creditCard.png" />
       </Box>
-      <Box className="flex-1 px-[89px] flex flex-col justify-start items-start m-auto space-y-8 font-openSans">
+      <Box className="flex-1   lg:px-[89px] flex flex-col justify-start items-start m-auto space-y-8 font-openSans">
         <h1 className="text-3xl font-bold font-overpass text-white">WORLD ELITE Credit Card </h1>
         <Stack
+      
           direction="row"
           gap={2}
           justifyContent="center"

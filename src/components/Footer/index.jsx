@@ -26,10 +26,10 @@ const Footer = () => {
     );
   };
   return (
-    <Box className="h-[470px]   bg-[#1c2746]  opacity-75  relative flex flex-col justify-center items-center mt-0 font-inter ">
+    <Box className="lg:h-[470px]   bg-[#1c2746]  opacity-75  relative flex flex-col justify-center items-center mt-0 font-inter ">
       <img src="/src/assets/footer.png" className="absolute right-0 " />
-      <Box className="   grid grid-cols-4 gap-8 px-[120px] py-[60px] text-white">
-        <Box className="flex flex-col justify-around items-baseline h-[254px]">
+      <Box className="  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-8 px-5 lg:px-[120px] py-[60px] text-white ">
+        <Box className="flex flex-col  justify-around items-baseline h-[254px]">
           <img src="/src/assets/companyLogo.png" />
           <p>
             Lorem ipsum dolor amet, consectetur adipiscing elit. Eget nisl nunc
@@ -49,7 +49,7 @@ const Footer = () => {
 
         {footerData.map((data, idx) => hyperLinkComponent(data, idx))}
       </Box>
-      <Box className="flex  justify-between items-center w-[85%] text-white">
+      <Box className="flex flex-col lg:flex-row  text-center space-y-2 lg:space-y-0 justify-between items-center w-[85%] text-white pb-5">
         <h1>© 2024 Cuttle Card. All rights reserved</h1>
         <h1>Terms & Conditions | Privacy Policy | Sitemap | Disclaimer</h1>
       </Box>

@@ -3,8 +3,12 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
  
 const WhyCuttle = () => {
   return (
-    <Box display="flex" bgcolor="#17203A" margin="60px 0px">
-      <Box className="flex-1 px-[89px] flex flex-col justify-start items-start m-auto space-y-6 font-overpass"  >
+    <Box
+      className="flex flex-col lg:flex-row bg-[#17203A] my-[60px] py-12 md:py-20 lg:py-0 space-y-4 md:space-y-8 lg:space-y-0 "
+      
+     
+    >
+      <Box className="flex-1 px-5 lg:px-[89px]  flex flex-col justify-start items-start m-auto space-y-5 md:space-y-8 lg:space-y-6 font-overpass">
         <h1 className="text-4xl text-white">Why Cuttle Card ? </h1>
         <h6>
           By choosing Cuttle Card credit card, you will enjoy globally accepted

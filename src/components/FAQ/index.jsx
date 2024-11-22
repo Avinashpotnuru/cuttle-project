@@ -5,7 +5,7 @@ import { faqData } from "../../Data";
 
 const FAQ = () => {
   return (
-    <Box bgcolor="#161F36" component="div" className=" mx-auto px-[120px] py-[60px] font-montserrat ">
+    <Box bgcolor="#161F36" component="div" className=" mx-auto px-[20px] lg:px-[120px] py-[60px] font-montserrat ">
       <h1 className="text-2xl font-bold text-white py-3 ">
         Frequently Aksed Questions
       </h1>

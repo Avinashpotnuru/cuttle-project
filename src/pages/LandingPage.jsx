@@ -24,23 +24,26 @@ import {
 const LandingPage = () => {
   return (
     <>
-      <Box className="text-[#96A1C2] p-2 mx-[120px] " component="div">
-       
+      <Box
+        className="text-[#96A1C2] p-2 mx-auto sm:mx-[60px] lg:mx-[120px]"
+        component="div"
+      >
         <Stack
-          direction="row"
+          direction={{ xs: "column", sm: "row" }} // Change direction to column for small screens and row for larger ones
           spacing={2}
           justifyContent="space-between"
           alignItems="center"
+          flexWrap="wrap"
         >
           <Typography variant="subtitle1" gutterBottom>
             Welcome to Cuttle Card
           </Typography>
-          <Stack direction="row" spacing={2}>
-            <Stack direction="row" spacing={1}>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+            <Stack direction="row" spacing={1} alignItems="center">
               <EmailIcon />
               <Typography variant="body1">yourmeail@domain.com</Typography>
             </Stack>
-            <Stack direction="row" spacing={1}>
+            <Stack direction="row" spacing={1} alignItems="center">
               <PhoneEnabledIcon />
               <Typography variant="body1">+1 (23) 3356 556</Typography>
             </Stack>
@@ -52,10 +55,11 @@ const LandingPage = () => {
         sx={{
           backgroundColor: "#222e52",
           marginTop: "10px",
-          height: "1px",
+          height: { xs: "1px", sm: "1px", md: "2px" }, // Adjust height for different screens
           borderWidth: "1px",
         }}
       />
+
       <Header />
       <Banner />
       <Organizations />
