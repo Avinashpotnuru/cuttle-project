@@ -7,12 +7,20 @@ import {
   IconButton,
   Stack,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import CustomButton from "../DefaultButton";
 
-const Header = () => {
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+import Divider from "@mui/material/Divider";
+
+import  companyLogo  from  "../../assets/companyLogo.png";
+import { Link } from "react-router-dom";
+
+function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isLgScreen, setIsLgScreen] = useState(false);
 
@@ -21,7 +29,7 @@ const Header = () => {
   };
 
   const checkScreenWidth = () => {
-    setIsLgScreen(window.innerWidth >= 1024);
+    setIsLgScreen(window.innerWidth >= 1023);
   };
 
   useEffect(() => {
@@ -59,7 +67,7 @@ const Header = () => {
               color: "#17203A",
             },
           }}
-          onClick={() => setDrawerOpen(false)} 
+          onClick={() => setDrawerOpen(false)}
         >
           {item}
         </Button>
@@ -80,9 +88,9 @@ const Header = () => {
               color: "white",
             },
             marginBottom: "10px",
-            borderRadius: "0px", 
+            borderRadius: "0px",
           }}
-          onClick={() => setDrawerOpen(false)} 
+          onClick={() => setDrawerOpen(false)}
         >
           {item}
         </CustomButton>
@@ -91,85 +99,122 @@ const Header = () => {
   );
 
   return (
-    <AppBar
-      position="sticky"
-      sx={{ backgroundColor: " rgba(34, 46, 82, 1)", boxShadow: "none" }}
-    >
-      <Toolbar className="px-4 sm:px-12">
-        <Box
-          component="div"
-          className="flex justify-between items-center w-full"
+    <>
+      <Box
+        className="text-[#96A1C2] p-2 mx-auto sm:mx-[60px] lg:mx-[120px]"
+        component="div"
+      >
+        <Stack
+          direction={{ xs: "column", sm: "row" }} // Change direction to column for small screens and row for larger ones
+          spacing={2}
+          justifyContent="space-between"
+          alignItems="center"
+          flexWrap="wrap"
         >
-          {/* Logo Section */}
-          <img
-            src="/src/assets/companyLogo.png"
-            className="w-[150px] sm:w-[200px]"
-          />
-
-          <Stack
-            direction="row"
-            spacing={2}
-            alignItems="center"
-            sx={{
-              display: isLgScreen ? "flex" : "none",
-            }}
-          >
-            <Stack direction="row" spacing={2} className="mt-4 sm:mt-0">
-              {["Home", "Help Center", "About us"].map((item, idx) => (
-                <Button key={idx} sx={{ color: "#C5CDE9" }}>
-                  {item}
-                </Button>
-              ))}
-              <Stack direction="row" spacing={2}>
-                {["Login", "Register Now"].map((item, idx) => (
-                  <CustomButton
-                    key={idx}
-                    variant={idx === 0 ? "text" : "contained"}
-                    sx={{
-                      bgcolor:
-                        idx === 0 ? "rgba(211, 211, 211, 0.1)" : "primary.main",
-                      color: idx === 0 ? "primary.main" : "white",
-                      "&:hover": {
-                        bgcolor:
-                          idx === 0
-                            ? "rgba(211, 211, 211, 0.8)"
-                            : "primary.dark",
-                      },
-                    }}
-                  >
-                    {item}
-                  </CustomButton>
-                ))}
-              </Stack>
+          <Typography variant="subtitle1" gutterBottom>
+            Welcome to Cuttle Card
+          </Typography>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <EmailIcon />
+              <Typography variant="body1">yourmeail@domain.com</Typography>
+            </Stack>
+            <Stack direction="row" spacing={1} alignItems="center">
+              <PhoneEnabledIcon />
+              <Typography variant="body1">+1 (23) 3356 556</Typography>
             </Stack>
           </Stack>
+        </Stack>
+      </Box>
 
-          <IconButton
-            color="inherit"
-            edge="end"
-            sx={{ display: { xs: "block", md: "none" } }}
-            onClick={toggleDrawer}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Box>
-      </Toolbar>
-
-      <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={toggleDrawer}
+      <Divider
         sx={{
-          "& .MuiDrawer-paper": {
-            backgroundColor: "#17203A",
-            color: "#C5CDE9",
-          },
+          backgroundColor: "#222e52",
+          marginTop: "10px",
+          height: { xs: "1px", sm: "1px", md: "2px" }, // Adjust height for different screens
+          borderWidth: "1px",
         }}
+      />
+      <AppBar
+        position="sticky"
+        sx={{ backgroundColor: " rgba(34, 46, 82, 1)", boxShadow: "none" }}
       >
-        {drawerContents}
-      </Drawer>
-    </AppBar>
+        <Toolbar className="px-4 sm:px-12">
+          <Box
+            component="div"
+            className="flex justify-between items-center w-full"
+          >
+            {/* Logo Section */}
+            <img src={companyLogo} className="w-[150px] sm:w-[200px]" />
+
+            <Stack
+              direction="row"
+              spacing={2}
+              alignItems="center"
+              sx={{
+                display: isLgScreen ? "flex" : "none",
+              }}
+            >
+              <Stack direction="row" spacing={2} className="mt-4 sm:mt-0">
+                {["Home", "Help Center", "About us"].map((item, idx) => (
+                  <Button key={idx} sx={{ color: "#C5CDE9" }}>
+                    {item}
+                  </Button>
+                ))}
+                <Stack direction="row" spacing={2}>
+                  {["Login", "Register Now"].map((item, idx) => (
+                    <CustomButton
+                      key={idx}
+                      variant={idx === 0 ? "text" : "contained"}
+                      sx={{
+                        bgcolor:
+                          idx === 0
+                            ? "rgba(211, 211, 211, 0.1)"
+                            : "primary.main",
+                        color: idx === 0 ? "primary.main" : "white",
+                        "&:hover": {
+                          bgcolor:
+                            idx === 0
+                              ? "rgba(211, 211, 211, 0.8)"
+                              : "primary.dark",
+                        },
+                      }}
+                    >
+                      <Link to={idx === 0 ? "/login" : "/register"}>{item}</Link>
+                    </CustomButton>
+                  ))}
+                </Stack>
+              </Stack>
+            </Stack>
+
+            <IconButton
+              color="inherit"
+              edge="end"
+              // sx={{ display: { xs: "block", lg: "none" } }}
+              sx={{ display: isLgScreen ? "none" : "flex" }}
+              onClick={toggleDrawer}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
+        </Toolbar>
+
+        <Drawer
+          anchor="left"
+          open={drawerOpen}
+          onClose={toggleDrawer}
+          sx={{
+            "& .MuiDrawer-paper": {
+              backgroundColor: "#17203A",
+              color: "#C5CDE9",
+            },
+          }}
+        >
+          {drawerContents}
+        </Drawer>
+      </AppBar>
+    </>
   );
-};
+}
 
 export default Header;

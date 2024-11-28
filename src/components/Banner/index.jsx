@@ -1,6 +1,9 @@
 import { Box } from "@mui/material";
 import DefaultButton from "../DefaultButton";
 
+import banner from "../../assets/banner.png";
+
+
 const Banner = () => {
   return (
     <Box className="flex flex-col lg:flex-row justify-center gap-[60px] items-center mx-[20px] lg:mx-[140px] my-[80px]">
@@ -20,7 +23,7 @@ const Banner = () => {
         <DefaultButton>Get Started</DefaultButton>
       </Box>
       <Box flex={1} textAlign="center">
-        <img src="/src/assets/banner.png" />
+        <img src={banner} />
       </Box>
     </Box>
   );

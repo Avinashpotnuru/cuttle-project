@@ -4,7 +4,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const FundSecurity = () => {
   return (
     <Box
-      className="flex flex-col lg:flex-row justify-center items-center bg-[#17203A] py-7 px-5 lg:px-0 md:py-10 lg:py-0 lg:h-[601px] lg:my-[60px]"
+      className="flex flex-col lg:flex-row justify-center items-center bg-[#17203A] py-7 px-5 lg:px-0 md:py-10 lg:py-0 lg:min-h-[601px] lg:my-[60px]"
      
     >
       <Box className="flex-1  md:w-[90%] lg:pl-[89px]  flex flex-col justify-start items-start m-auto space-y-6 !font-overpass">
